@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     fontSize: 10,
     lineHeight: 12,
     color: colors.black,
-    // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     alignSelf: 'center',
     width: 120,
     textAlign: 'center',
@@ -46,7 +45,6 @@ const styles = StyleSheet.create({
   },
   submitButton: {
     backgroundColor: colors.orangePeel,
-    // box-shadow: 0px 4px 8px rgba(27, 225, 175, 0.16);
     elevation: 3,
     borderRadius: 6,
     justifyContent: 'center',

@@ -25,7 +25,6 @@ const reducer = (state = initialState, action: Action): IState => {
         isLoading: true,
       }
     }
-    // TODO change logic
     case ActionType.REPLACE_ADDRESSES: {
       return {
         ...state,

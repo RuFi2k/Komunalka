@@ -1,5 +1,5 @@
 import { StackNavigationProp } from '@react-navigation/stack'
-import NoNotifications from 'common/NoNotifications'
+import EmptyStateView from 'common/EmptyStateView'
 import PaymentSection from 'common/PaymentSection'
 import NotificationItem from 'components/NotificationItem'
 import Touchable from 'components/Touchable'
@@ -49,7 +49,9 @@ const ContentView = ({
         />
       ))
     ) : (
-      <NoNotifications
+      <EmptyStateView
+        label={'У вас ще немає жодного нагадування'}
+        buttonLabel={'Створити'}
         onButtonPress={() => navigate('NotificationTemplates')}
       />
     )}

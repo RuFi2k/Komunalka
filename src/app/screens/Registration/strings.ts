@@ -1,0 +1,11 @@
+export const TITLE = 'Komunalochka';
+export const SUBTITLE = 'твій менеджер комунальних послуг';
+export const REGISTER = 'Зареєструватись';
+export const EMAIL_ADDRESS = 'Електронна адреса';
+export const NAME = 'Ім\'я';
+export const ENTER_NAME = 'Введіть ваше ім\'я';
+export const SURNAME = 'Празвище';
+export const ENTER_SURNAME = 'Введіть ваше прізвище';
+export const PASSWORD = 'Пароль';
+export const ENTER_PASSWORD  = 'Введіть пароль';
+export const CONFIRM_PASSWORD = 'Підтвердіть пароль';

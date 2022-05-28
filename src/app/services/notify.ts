@@ -1,4 +1,3 @@
-/* eslint-disable no-nested-ternary */
 import colors from 'constants/colors'
 import Toast from 'react-native-root-toast'
 
@@ -28,21 +27,10 @@ const toast = () => {
     },
     opacity: 0.9,
     delay: 0,
-    onShow: () => {
-      // calls on toast\`s appear animation start
-    },
-    onShown: () => {
-      // calls on toast\`s appear animation end.
-    },
     onHide: () => {
-      // calls on toast\`s hide animation start.
       textArray.splice(0, 1)
       ready = true
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       loop()
-    },
-    onHidden: () => {
-      // calls on toast\`s hide animation end.
     },
   })
 }

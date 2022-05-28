@@ -10,6 +10,7 @@ import { ScrollView } from 'react-native-gesture-handler'
 import { AppStackParamList } from 'types'
 
 import styles from './styles'
+import * as Strings from './strings'
 
 const PAYMENT_ITEMS: PaymentItemProps[] = [
   {
@@ -48,10 +49,10 @@ const ContentView = ({ navigation: { navigate } }: ContentViewProps) => (
     contentContainerStyle={styles.contentContainer}
   >
     <PaymentSection />
-    <Text style={styles.street}>{'Вулиця Лукаша, 54, 8'}</Text>
+    <Text style={styles.street}>{Strings.ADDRESS}</Text>
     <View style={styles.monthContainer}>
       <Image source={calendar} style={styles.calendarIcon} />
-      <Text>{'Квітень 2021'}</Text>
+      <Text>{Strings.APRIL_2021}</Text>
       <Image source={arrowDown} style={styles.arrowDown} />
     </View>
     {PAYMENT_ITEMS.map((item, i) => (
@@ -65,7 +66,7 @@ const ContentView = ({ navigation: { navigate } }: ContentViewProps) => (
         wilBePayed={item.wilBePayed}
       />
     ))}
-    <Button onPress={() => navigate('CardPayment')}>{'Сплатити 899,30'}</Button>
+    <Button onPress={() => navigate('CardPayment')}>{Strings.TO_PAY}</Button>
   </ScrollView>
 )
 

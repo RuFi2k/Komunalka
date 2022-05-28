@@ -7,7 +7,7 @@ import styles from './styles'
 interface ButtonProps {
   onPress?: () => void
   disabled?: boolean
-  children: string
+  children?: string
 }
 
 const Button = ({ onPress, disabled, children }: ButtonProps) => (

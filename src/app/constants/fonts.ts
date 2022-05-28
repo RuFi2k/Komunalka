@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native'
 
-// TODO fonts
 export default StyleSheet.create({
   lightItalic: {
     fontStyle: 'italic',

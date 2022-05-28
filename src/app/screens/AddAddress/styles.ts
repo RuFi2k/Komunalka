@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
   },
   formWrapper: {
     backgroundColor: '#FFFEFD',
-    // box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15),
     elevation: 3,
     borderRadius: 45,
     paddingLeft: 20,

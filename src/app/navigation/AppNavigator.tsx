@@ -33,7 +33,6 @@ const connector = connect(mapStateToProps)
 
 const AppNavigator = () => (
   <NavigationContainer>
-    {/* <StatusBar translucent backgroundColor="transparent" /> */}
     <Stack.Navigator
       screenOptions={{
         headerShown: false,

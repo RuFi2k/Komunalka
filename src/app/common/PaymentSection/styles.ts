@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
   payRateContainer: {
     height: 20,
     backgroundColor: colors.orangePeel,
-    // box-shadow: 0px 4px 20px rgba(255, 153, 0, 0.3),
     elevation: 3,
     borderRadius: 20,
     justifyContent: 'center',

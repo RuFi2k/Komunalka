@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
   container: {
     marginTop: 25,
     backgroundColor: '#FFFEFD',
-    // box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15),
     elevation: 4,
     borderRadius: 30,
     paddingBottom: 30,

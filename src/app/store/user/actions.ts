@@ -1,7 +1,6 @@
 import { GoogleSignin, User } from '@react-native-community/google-signin'
 import { DeepPartial } from 'redux'
 import notify from 'services/notify'
-// eslint-disable-next-line import/no-named-as-default
 import action from 'store/action'
 import { AppThunkAsync, IAddressItem, IError } from 'types/index'
 

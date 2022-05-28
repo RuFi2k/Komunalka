@@ -12,6 +12,7 @@ import { emailValidate, minLengthValidate } from 'services/validation'
 
 import IFormData from './IFormData.d'
 import styles from './styles'
+import * as Strings from './strings'
 
 const lengthValidate = minLengthValidate(minPasswordLen)
 const confirmPasswordValidate: Validator = (
@@ -22,55 +23,78 @@ const confirmPasswordValidate: Validator = (
     ? undefined
     : "Password doesn't match"
 
+type FormConfig = {
+  Component: React.FC
+  name: string
+  label: string
+  placeholder: string
+  keyboardType?: string
+  validate?: () => (string | undefined)
+  style: unknown
+  type?: string
+  autoCapitalize?: string
+  right: React.Element
+  required: boolean
+}[]
+
+const formConfig: FormConfig = [
+  {
+    Component: Input,
+    name: "email",
+    label: Strings.EMAIL_ADDRESS,
+    placeholder: "komunalshik@gmail.com",
+    keyboardType: "email-address",
+    validate: emailValidate,
+    style: styles.input,
+    autoCapitalize: "none",
+    right: <Image source={email} style={styles.rightIcon} />,
+    required: true,
+  },
+  {
+    Component: Input,
+    name: "name",
+    label: Strings.NAME,
+    placeholder: Strings.ENTER_NAME,
+    style: styles.input,
+    right: <Image source={userOutlined} style={styles.rightIcon} />,
+    required: true
+  },
+  {
+    Component: Input,
+    name: "familyName",
+    label: Strings.SURNAME,
+    placeholder: Strings.ENTER_SURNAME,
+    style: styles.input,
+    right: <Image source={userFilled} style={styles.rightIcon} />,
+    required: true,
+  },
+  {
+    Component: Input,
+    name: "password",
+    label: Strings.PASSWORD,
+    placeholder: Strings.ENTER_PASSWORD,
+    style: styles.input,
+    type: "password",
+    validate: lengthValidate,
+    right: <Image source={lock} style={styles.rightIcon} />,
+    required: true,
+  },
+  {
+    Component: Input,
+    name: "confirmPassword",
+    label: Strings.CONFIRM_PASSWORD,
+    placeholder: Strings.CONFIRM_PASSWORD,
+    style: styles.input,
+    type: "password",
+    validate: confirmPasswordValidate,
+    right: <Image source={lockOpen} style={styles.rightIcon} />,
+    required: true,
+  }
+]
+
 const Form = () => (
   <>
-    <Input
-      name="email"
-      label="Емейл адреса"
-      placeholder="komunalshik@gmail.com"
-      keyboardType="email-address"
-      validate={emailValidate}
-      style={styles.input}
-      autoCapitalize="none"
-      right={<Image source={email} style={styles.rightIcon} />}
-      required
-    />
-    <Input
-      name="name"
-      label="Ім’я"
-      placeholder="Введіть ваше ім'я"
-      style={styles.input}
-      right={<Image source={userOutlined} style={styles.rightIcon} />}
-      required
-    />
-    <Input
-      name="familyName"
-      label="Фамілія"
-      placeholder="Введіть вашу фамілію"
-      style={styles.input}
-      right={<Image source={userFilled} style={styles.rightIcon} />}
-      required
-    />
-    <Input
-      name="password"
-      label="Пароль"
-      placeholder="Введіть пароль"
-      style={styles.input}
-      type="password"
-      validate={lengthValidate}
-      right={<Image source={lock} style={styles.rightIcon} />}
-      required
-    />
-    <Input
-      name="confirmPassword"
-      label="Підтвердіть пароль"
-      placeholder="Підтвердіть пароль"
-      style={styles.input}
-      type="password"
-      validate={confirmPasswordValidate}
-      right={<Image source={lockOpen} style={styles.rightIcon} />}
-      required
-    />
+    {formConfig.map(({ Component, ...props }) => <Component {...props} key={props.name} />)}
   </>
 )
 

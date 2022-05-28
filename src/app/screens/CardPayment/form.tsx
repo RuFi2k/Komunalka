@@ -23,7 +23,6 @@ const Form = () => (
       underlineColor="transparent"
       style={styles.input}
     />
-    {/* <Input label="Name of Card" placeholder="Enter Name" name="nameOfCard" /> */}
     <View style={styles.infoRow}>
       <Input
         label="Термін"

@@ -5,6 +5,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 import Form from './form'
 import styles from './styles'
+import * as Strings from './strings'
 
 interface ContentViewProps {
   save: () => void
@@ -18,9 +19,9 @@ const ContentView = ({ save, valid }: ContentViewProps) => (
   >
     <View style={styles.screen}>
       <View style={styles.content}>
-        <Text style={styles.title}>{'Komunalochka'}</Text>
+        <Text style={styles.title}>{Strings.TITLE}</Text>
         <Text style={styles.description}>
-          {'твій менеджер комунальних послуг'}
+          {Strings.SUBTITLE}
         </Text>
         <Form />
         <Touchable
@@ -28,7 +29,7 @@ const ContentView = ({ save, valid }: ContentViewProps) => (
           disabled={!valid}
           style={[styles.submitButton, !valid && styles.disabledButton]}
         >
-          <Text style={styles.submitText}>{'Зареєструватись'}</Text>
+          <Text style={styles.submitText}>{Strings.REGISTER}</Text>
         </Touchable>
       </View>
     </View>

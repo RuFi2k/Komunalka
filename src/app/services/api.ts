@@ -1,31 +1,10 @@
-/* eslint-disable no-console */
 import axios from 'axios'
 
 import { apiUrl } from './config'
 
-// import { getState } from 'services/store'
-
 const instance = axios.create({
   baseURL: apiUrl,
 })
-
-// TODO user token authorization
-// instance.interceptors.request.use(
-//   (config) => {
-//     const newConfigs = { ...config }
-//     const token = getState().user.auth_token
-//     if (!newConfigs.headers) {
-//       newConfigs.headers = {}
-//     }
-//     if (token) {
-//       newConfigs.headers.Authorization = `Bearer ${token}`
-//     }
-//     return newConfigs
-//   },
-//   (error) => {
-//     return Promise.reject(error)
-//   },
-// )
 
 if (__DEV__) {
   axios.interceptors.request.use(

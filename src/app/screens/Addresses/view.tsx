@@ -1,13 +1,14 @@
 import { StackNavigationProp } from '@react-navigation/stack'
 import add from 'assets/icons/add.png'
 import mapBg from 'assets/mapBg.png'
-import NoAddresses from 'common/NoAddresses'
+import EmptyStateView from 'common/EmptyStateView'
 import SwipableList from 'common/SwipableList'
 import AddressItem from 'components/AddressItem'
 import Touchable from 'components/Touchable'
 import React from 'react'
 import { Image, View } from 'react-native'
 import { AppStackParamList, IAddressItem } from 'types'
+import location from 'assets/location.png'
 
 import styles from './styles'
 
@@ -41,7 +42,12 @@ const ContentView = ({
         onDelete={(item) => onDelete(item as unknown as IAddressItem[])}
       />
     ) : (
-      <NoAddresses onPress={() => navigate('AddAddress')} />
+      <EmptyStateView
+        label='Ще немає жодної адреси'
+        buttonLabel='Додати адресу'
+        onButtonPress={() => navigate('AddAddress')}
+        image={{ location }}
+      />
     )}
   </View>
 )

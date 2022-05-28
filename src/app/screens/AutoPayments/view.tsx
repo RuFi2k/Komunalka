@@ -1,5 +1,5 @@
 import { StackNavigationProp } from '@react-navigation/stack'
-import NoPayments from 'common/NoPayments'
+import EmptyStateView from 'common/EmptyStateView'
 import PaymentSection from 'common/PaymentSection'
 import NotificationItem from 'components/NotificationItem'
 import Touchable from 'components/Touchable'
@@ -49,7 +49,7 @@ const ContentView = ({
         />
       ))
     ) : (
-      <NoPayments onButtonPress={() => navigate('AutoPaymentsTemplates')} />
+      <EmptyStateView label={'У вас ще немає жодного автоплатежу'} buttonLabel={'Створити'} onButtonPress={() => navigate('AutoPaymentsTemplates')} />
     )}
   </ScrollView>
 )

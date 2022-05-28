@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { AppStackParamList } from 'types'
 
 import ContentView from './view'
+import * as Strings from './strings'
 
 interface CountersProps {
   navigation: StackNavigationProp<AppStackParamList, 'Payment'>
@@ -13,7 +14,7 @@ interface CountersProps {
 
 const Counters = ({ navigation }: CountersProps) => (
   <SafeAreaView style={{ flex: 1 }}>
-    <Header navigation={navigation}>{'Оплата комунальних'}</Header>
+    <Header navigation={navigation}>{Strings.UTILITY_PAYMENT}</Header>
     <ContentView navigation={navigation} />
     <FooterMenu navigation={navigation} />
   </SafeAreaView>

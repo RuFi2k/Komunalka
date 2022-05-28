@@ -1,0 +1,10 @@
+export const MUSTHAVE = 'Обов\'язково';
+export const INVALID_EMAIL = 'Будь ласка, введіть правильний емейл';
+export const NUMBERS_ONLY = 'Тільки цифри';
+export const INVALID_NUMBER = 'Будь ласка, введіть правильний номер';
+export const MINIMUM_SYMBOLS = (len: string) => `Мінімум ${len} символів`;
+export const MAXIMUM_SYMBOLS = (len: string) => `Максимум ${len} символів`;
+export const CANNOT_CONTAIN_BLANK = 'Не може містити пробілів';
+export const INVALID_CARD_NUMBER = 'Неправильний номер карти';
+export const TYPE_A_VALID_YEAR = 'Введіть правильний рік';
+export const TYPE_A_VALID_MONTH = 'Введіть правильний місяць';

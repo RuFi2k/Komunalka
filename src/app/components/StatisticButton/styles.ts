@@ -4,7 +4,6 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
   statisticButton: {
     backgroundColor: colors.orangePeel,
-    // box-shadow: 0px 4px 20px rgba(255, 153, 0, 0.3),
     borderRadius: 20,
     paddingHorizontal: 22,
     paddingVertical: 3,

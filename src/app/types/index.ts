@@ -106,7 +106,6 @@ export type TextContentType =
   | 'password'
   | 'newPassword'
   | 'oneTimeCode'
-  // is not in the documentation. may occur strange behavior
   | 'expiryDate'
 
 export type User = GoogleUser

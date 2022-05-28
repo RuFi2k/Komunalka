@@ -1,0 +1,12 @@
+export const STATISTICS = 'Статистика';
+export const UTILITIES = 'Комунальні послуги';
+export const WATER = 'Вода';
+export const LIGHT = 'Світло';
+export const BURNINGS = 'Опалення';
+export const PERIOD = 'Період';
+export const SEVEN_DAYS = '7 днів';
+export const THIRTY_ONE_DAY = '31 день';
+export const TWELVE_MONTHS = '12 місяців';
+export const MARCH_2021 = 'Березень 2021';
+export const UAH = 'Грн';
+export const INCREASE = 'Підвищення 10%';

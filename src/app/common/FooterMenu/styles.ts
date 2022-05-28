@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
   footerMenu: {
     position: 'absolute',
     backgroundColor: colors.white,
-    // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     elevation: 6,
     flexDirection: 'row',
     width: '100%',

@@ -33,11 +33,7 @@ const SwipableList = ({ data, renderItem, onDelete }: SwipableListProps) => {
     newData.splice(prevIndex, 1)
     setListData(newData)
     onDelete(newData)
-  }
-
-  const onRowDidOpen = (rowKey: string) => {
-    console.log('This row opened', rowKey)
-  }
+  }``
 
   const renderHiddenItem = (
     rowData: ListRenderItemInfo<Item>,
@@ -64,7 +60,7 @@ const SwipableList = ({ data, renderItem, onDelete }: SwipableListProps) => {
         previewRowKey={listData?.[0]?.key || ''}
         previewOpenValue={-40}
         previewOpenDelay={1500}
-        onRowDidOpen={onRowDidOpen}
+        onRowDidOpen={() => {}}
       />
     </View>
   )

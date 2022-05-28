@@ -5,7 +5,6 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.white,
-    // box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
     borderRadius: 45,
     elevation: 3,
     alignItems: 'center',

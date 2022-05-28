@@ -5,6 +5,7 @@ import React from 'react'
 import { Image, Text, View } from 'react-native'
 
 import styles from './styles'
+import * as Strings from './strings'
 
 interface ContentViewProps {
   isSuccessful?: boolean
@@ -18,7 +19,7 @@ const ContentView = ({ isSuccessful }: ContentViewProps) => (
         <View style={styles.content}>
           <View style={styles.payedTitleWrapper}>
             <Text style={styles.title}>
-              {'Комунальні послуги успішно сплачені'}
+              {Strings.PAID_SUCCESSFULLY}
             </Text>
           </View>
           <View style={styles.imageWrapper}>
@@ -30,8 +31,8 @@ const ContentView = ({ isSuccessful }: ContentViewProps) => (
           <View style={styles.contentInner}>
             <Image source={warningSign} style={styles.warningSignIcon} />
             <Text style={[styles.title, styles.unsuccessfulTitle]}>
-              {'Перевірте з’єднання '}
-              {'з інтернетом'}
+              {Strings.CHECK_CONNECTION}
+              {Strings.WITH_INTERNET}
             </Text>
           </View>
         </View>

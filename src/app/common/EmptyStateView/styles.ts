@@ -20,6 +20,18 @@ const styles = StyleSheet.create({
   buttonWrapper: {
     width: '100%',
   },
+  container: {
+    marginTop: 32,
+    paddingTop: 43,
+    backgroundColor: '#FFFEFD',
+    elevation: 3,
+    borderRadius: 20,
+    alignItems: 'center',
+  },
+  icon: {
+    width: 80,
+    height: 80,
+  },
 })
 
 export default styles

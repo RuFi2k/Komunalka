@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { AppStackParamList } from 'types'
 
 import ContentView from './view'
+import * as Strings from './strings'
 
 interface NotificationTemplatesProps {
   navigation: StackNavigationProp<AppStackParamList, 'NotificationTemplates'>
@@ -13,7 +14,7 @@ interface NotificationTemplatesProps {
 
 const NotificationTemplates = ({ navigation }: NotificationTemplatesProps) => (
   <SafeAreaView style={{ flex: 1 }}>
-    <Header navigation={navigation}>{'Оплата комунальних'}</Header>
+    <Header navigation={navigation}>{Strings.UTILITY_PAYMENT}</Header>
     <ContentView navigation={navigation} />
     <FooterMenu navigation={navigation} />
   </SafeAreaView>

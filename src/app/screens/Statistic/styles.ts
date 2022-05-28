@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
   },
   banner: {
     backgroundColor: colors.romance,
-    // box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15),
     elevation: 3,
     borderRadius: 45,
     marginTop: -45,
@@ -108,7 +107,6 @@ const styles = StyleSheet.create({
     width: vw(100),
     height: '40%',
     alignSelf: 'center',
-    // backgroundColor: 'red',
   },
 })
 

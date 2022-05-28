@@ -5,8 +5,6 @@ const styles = StyleSheet.create({
     marginTop: 32,
     paddingTop: 43,
     backgroundColor: '#FFFEFD',
-    // backgroundColor: 'red',
-    // box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15),
     elevation: 3,
     borderRadius: 20,
     alignItems: 'center',
